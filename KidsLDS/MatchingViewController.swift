@@ -32,6 +32,7 @@ class MatchingViewController: UIViewController {
     //local vars
     var numberOfFlipedCards = 0
     var cards = [Card]()
+    var cardsBtn = [UIButton]()
     var currentPair = [Int]()
     let cardBackground = "cardBack.jpg"
     
@@ -40,24 +41,30 @@ class MatchingViewController: UIViewController {
         super.viewDidLoad()
         //var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "update", userInfo: nil, repeats: true)
         
-        //set tag on cards
-        card1Btn.tag = 0
-        card2Btn.tag = 1
-        card3Btn.tag = 2
-        card4Btn.tag = 3
-        card5Btn.tag = 4
-        card6Btn.tag = 5
-        card7Btn.tag = 6
-        card8Btn.tag = 7
-        card9Btn.tag = 8
-        card10Btn.tag = 9
-        card11Btn.tag = 10
-        card12Btn.tag = 11
-        card13Btn.tag = 12
-        card14Btn.tag = 13
-        card15Btn.tag = 14
-        card16Btn.tag = 15
         
+        //add buttons to collection
+        cardsBtn.append(card1Btn)
+        cardsBtn.append(card2Btn)
+        cardsBtn.append(card3Btn)
+        cardsBtn.append(card4Btn)
+        cardsBtn.append(card5Btn)
+        cardsBtn.append(card6Btn)
+        cardsBtn.append(card7Btn)
+        cardsBtn.append(card8Btn)
+        cardsBtn.append(card9Btn)
+        cardsBtn.append(card10Btn)
+        cardsBtn.append(card11Btn)
+        cardsBtn.append(card12Btn)
+        cardsBtn.append(card13Btn)
+        cardsBtn.append(card14Btn)
+        cardsBtn.append(card15Btn)
+        cardsBtn.append(card16Btn)
+        
+        //set tags
+        for (var i=0; i<cardsBtn.count; i++) {
+            cardsBtn[i].tag = i
+        }
+
         cards = layoutCards()
         
     }
@@ -76,11 +83,12 @@ class MatchingViewController: UIViewController {
                 currentPair.append(id)
                 numberOfFlipedCards++
                 if(numberOfFlipedCards == 2){
-                    var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: false)
                 }
             }
             //sender.setImage(UIImage(named: "1_JosephSmith.jpg"), forState: UIControlState.Normal)
-            print(sender.tag)
+            print("Sender tag \(sender.tag)")
+            print( "Random number \(Int(arc4random_uniform(UInt32(cards.count)) + 1)) " )
             
             
         }
@@ -93,21 +101,51 @@ class MatchingViewController: UIViewController {
             print("reset cards /n")
             for i in currentPair{
                 cards[i].setIsFliped(false)
-                card1Btn.setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
-                card2Btn.setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
+                cardsBtn[i].setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
             }
             numberOfFlipedCards = 0
         }
     }
     
     func layoutCards()->[Card]{
-        var cards = [Card]()
-        cards.append(Card(id: 0, imageName: "1_JosephSmith.jpg"))
-        cards.append(Card(id: 1, imageName: "2_BrighamYoung.jpg"))
-        cards.append(Card(id: 2, imageName: "3_JohnTaylor.jpg"))
-        cards.append(Card(id: 3, imageName: "4_WilfordWoodruff.jpg"))
+        var all16Cards = [Card]()
+        all16Cards.append(Card(id:  0, imageName: "1_JosephSmith.jpg"))
+        all16Cards.append(Card(id:  1, imageName: "2_BrighamYoung.jpg"))
+        all16Cards.append(Card(id:  2, imageName: "3_JohnTaylor.jpg"))
+        all16Cards.append(Card(id:  3, imageName: "4_WilfordWoodruff.jpg"))
+        all16Cards.append(Card(id:  4, imageName: "5_LorenzoSnow.jpg"))
+        all16Cards.append(Card(id:  5, imageName: "6_JosephFSmith.jpg"))
+        all16Cards.append(Card(id:  6, imageName: "7_HeberJGrant.jpg"))
+        all16Cards.append(Card(id:  7, imageName: "8_GeorgeAlbertSmith.jpg"))
+        all16Cards.append(Card(id:  8, imageName: "9_DavidOMcKay.jpg"))
+        all16Cards.append(Card(id:  9, imageName: "10_JosephFieldingSmith.jpg"))
+        all16Cards.append(Card(id: 10, imageName: "11_HaroldBLee.jpg"))
+        all16Cards.append(Card(id: 11, imageName: "12_SpencerWKimball.jpg"))
+        all16Cards.append(Card(id: 12, imageName: "13_EzraTaftBenson.jpg"))
+        all16Cards.append(Card(id: 13, imageName: "14_HowardWHunter.jpg"))
+        all16Cards.append(Card(id: 14, imageName: "15_GordonBHinckley.jpg"))
+        all16Cards.append(Card(id: 15, imageName: "16_ThomasSMonson.jpg"))
         
-        return cards
+        //builds the deck of cards
+        var semiRandomCards = [Card]()
+        for (var i = 0; i<8; i++){
+            var randomNumber = Int(arc4random_uniform(UInt32(all16Cards.count)))
+            var card = all16Cards.removeAtIndex(randomNumber)
+            semiRandomCards.append(card)
+            semiRandomCards.append(card)
+        }
+        
+        //randomizes the card locations
+        var fullRandomCards = [Card]()
+        for (var i = 0; i<16; i++){
+            var randomNumber = Int(arc4random_uniform(UInt32(semiRandomCards.count)))
+            var card = semiRandomCards.removeAtIndex(randomNumber)
+            fullRandomCards.append(card)
+        }
+        
+        
+        
+        return fullRandomCards
     }
 
 }

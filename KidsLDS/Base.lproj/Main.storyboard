@@ -71,10 +71,10 @@
                                             <constraint firstAttribute="height" constant="20" id="DgC-0Q-6Kk"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iIw-UI-pU2" userLabel="row1Stack">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iIw-UI-pU2" userLabel="row1Stack">
                                         <rect key="frame" x="0.0" y="60" width="600" height="122"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-Sw-EhT" userLabel="card1Btn">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-Sw-EhT" userLabel="card1Btn">
                                                 <rect key="frame" x="0.0" y="0.0" width="147" height="122"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                                 <state key="normal" image="cardBack"/>
@@ -82,7 +82,7 @@
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHy-dV-I0r"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-Ma-eG2" userLabel="card2Btn">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-Ma-eG2" userLabel="card2Btn">
                                                 <rect key="frame" x="152" y="0.0" width="146" height="122"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>

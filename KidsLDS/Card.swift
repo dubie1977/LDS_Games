@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Card {
+class Card: NSObject {
 
     private var isFliped :Bool
     private var isMatched :Bool
@@ -41,6 +41,23 @@ class Card {
     
     func getImageName()->String{
         return imageName
+    }
+    
+    func getTagID()->Int{
+        return self.tagID
+    }
+    
+    func setTagID(tagID: Int){
+        self.tagID = tagID
+    }
+    
+    
+    override func isEqual(object: AnyObject?) -> Bool {
+        let otherCard = object as? Card
+        if ( self.tagID == otherCard?.tagID){
+            return true
+        }
+        return false
     }
 
 }

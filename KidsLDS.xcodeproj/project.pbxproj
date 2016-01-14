@@ -14,6 +14,7 @@
 		8C10E8BF1C421D4E00C837D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8BD1C421D4E00C837D0 /* LaunchScreen.storyboard */; };
 		8C10E8CA1C421D4E00C837D0 /* KidsLDSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8C91C421D4E00C837D0 /* KidsLDSTests.swift */; };
 		8C10E8D51C421D4E00C837D0 /* KidsLDSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8D41C421D4E00C837D0 /* KidsLDSUITests.swift */; };
+		8C10E8E31C44C76000C837D0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8E21C44C76000C837D0 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8C10E8D01C421D4E00C837D0 /* KidsLDSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidsLDSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C10E8D41C421D4E00C837D0 /* KidsLDSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsLDSUITests.swift; sourceTree = "<group>"; };
 		8C10E8D61C421D4E00C837D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C10E8E21C44C76000C837D0 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				8C10E8BB1C421D4E00C837D0 /* Assets.xcassets */,
 				8C10E8BD1C421D4E00C837D0 /* LaunchScreen.storyboard */,
 				8C10E8C01C421D4E00C837D0 /* Info.plist */,
+				8C10E8E21C44C76000C837D0 /* Card.swift */,
 			);
 			path = KidsLDS;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C10E8B71C421D4E00C837D0 /* MatchingViewController.swift in Sources */,
+				8C10E8E31C44C76000C837D0 /* Card.swift in Sources */,
 				8C10E8B51C421D4E00C837D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +493,7 @@
 				8C10E8DB1C421D4E00C837D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C10E8DC1C421D4E00C837D0 /* Build configuration list for PBXNativeTarget "KidsLDSTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				8C10E8DE1C421D4E00C837D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C10E8DF1C421D4E00C837D0 /* Build configuration list for PBXNativeTarget "KidsLDSUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				8C10E8E11C421D4E00C837D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

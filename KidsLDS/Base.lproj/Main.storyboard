@@ -265,6 +265,10 @@
                         <outlet property="card7Btn" destination="0Y1-KR-Mqm" id="mfv-8m-8Lg"/>
                         <outlet property="card8Btn" destination="RgF-E4-wAJ" id="eNR-5E-Iko"/>
                         <outlet property="card9Btn" destination="ZGc-4m-jdD" id="1e9-5f-IJi"/>
+                        <outlet property="matchCounterLbl" destination="Jwg-vr-VwU" id="dof-wA-tzM"/>
+                        <outlet property="newGameBtn" destination="G1g-qz-cuR" id="EI4-sz-uZb"/>
+                        <outlet property="resetBtn" destination="Jmm-yj-6Nd" id="XNO-eU-bYe"/>
+                        <outlet property="wonCounterLbl" destination="5Ud-hg-iCv" id="1wZ-gO-2bk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -28,18 +28,22 @@ class MatchingViewController: UIViewController {
     @IBOutlet weak var card15Btn: UIButton!
     @IBOutlet weak var card16Btn: UIButton!
     
+    @IBOutlet weak var matchCounterLbl: UILabel!
+    @IBOutlet weak var wonCounterLbl: UILabel!
+    
+    @IBOutlet weak var resetBtn: UIButton!
+    @IBOutlet weak var newGameBtn: UIButton!
     
     //local vars
-    var numberOfFlipedCards = 0
+    var cardsFliped = [Card]()
     var cards = [Card]()
     var cardsBtn = [UIButton]()
-    var currentPair = [Int]()
     let cardBackground = "cardBack.jpg"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //var timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "update", userInfo: nil, repeats: true)
+
         
         
         //add buttons to collection
@@ -64,6 +68,9 @@ class MatchingViewController: UIViewController {
         for (var i=0; i<cardsBtn.count; i++) {
             cardsBtn[i].tag = i
         }
+        
+        matchCounterLbl.text = "0"
+        wonCounterLbl.text = "0"
 
         cards = layoutCards()
         
@@ -75,20 +82,25 @@ class MatchingViewController: UIViewController {
     }
 
     @IBAction func cardSelected(sender: UIButton) {
-        if(numberOfFlipedCards < 2){
+        if(cardsFliped.count < 2){
             var id = sender.tag
-            if(id < cards.count){
-                var card = cards[id]
+            var card = cards[id]
+            
+            if(id < cards.count && !cardsFliped.contains(card)){
                 sender.setImage(UIImage(named: card.getImageName()), forState: UIControlState.Normal)
-                currentPair.append(id)
-                numberOfFlipedCards++
-                if(numberOfFlipedCards == 2){
-                    NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: false)
+                cardsFliped.append(card)
+                if(cardsFliped.count == 2 && cardsFliped[0].getImageName()==cardsFliped[1].getImageName()){
+                    cardsFliped.removeAll()
+                    print(" Matched Cards \n")
+                    var matches = Int(matchCounterLbl.text!)!+1
+                    matchCounterLbl.text = "\(matches)"
+                    if((cards.count / 2) == matches){
+                        wonCounterLbl.text = "\(Int(wonCounterLbl.text!)!+1)"
+                    }
+                }else {
+                    NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "update", userInfo: nil, repeats: false)
                 }
             }
-            //sender.setImage(UIImage(named: "1_JosephSmith.jpg"), forState: UIControlState.Normal)
-            print("Sender tag \(sender.tag)")
-            print( "Random number \(Int(arc4random_uniform(UInt32(cards.count)) + 1)) " )
             
             
         }
@@ -97,15 +109,16 @@ class MatchingViewController: UIViewController {
     
     // must be internal or public.
     func update() {
-        if(numberOfFlipedCards == 2){
-            print("reset cards /n")
-            for i in currentPair{
-                cards[i].setIsFliped(false)
-                cardsBtn[i].setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
+        if(cardsFliped.count == 2){
+            print("reset cards \n")
+            for card in cardsFliped{
+                cards[card.getTagID()].setIsFliped(false)
+                cardsBtn[card.getTagID()].setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
             }
-            numberOfFlipedCards = 0
+            cardsFliped.removeAll()
         }
     }
+    
     
     func layoutCards()->[Card]{
         var all16Cards = [Card]()
@@ -132,7 +145,7 @@ class MatchingViewController: UIViewController {
             var randomNumber = Int(arc4random_uniform(UInt32(all16Cards.count)))
             var card = all16Cards.removeAtIndex(randomNumber)
             semiRandomCards.append(card)
-            semiRandomCards.append(card)
+            semiRandomCards.append(Card(id: card.getTagID(), imageName: card.getImageName()))
         }
         
         //randomizes the card locations
@@ -140,6 +153,7 @@ class MatchingViewController: UIViewController {
         for (var i = 0; i<16; i++){
             var randomNumber = Int(arc4random_uniform(UInt32(semiRandomCards.count)))
             var card = semiRandomCards.removeAtIndex(randomNumber)
+            card.setTagID(i)
             fullRandomCards.append(card)
         }
         

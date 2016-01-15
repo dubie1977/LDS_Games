@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MatchingViewController: UIViewController {
 
@@ -40,7 +41,6 @@ class MatchingViewController: UIViewController {
     var cardsBtn = [UIButton]()
     let cardBackground = "cardBack.jpg"
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,10 +69,9 @@ class MatchingViewController: UIViewController {
             cardsBtn[i].tag = i
         }
         
-        matchCounterLbl.text = "0"
-        wonCounterLbl.text = "0"
-
-        cards = layoutCards()
+        resetGames()
+        
+        
         
     }
 
@@ -80,25 +79,40 @@ class MatchingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
 
+
+//Action functions
     @IBAction func cardSelected(sender: UIButton) {
         if(cardsFliped.count < 2){
             var id = sender.tag
             var card = cards[id]
             
-            if(id < cards.count && !cardsFliped.contains(card)){
+            var audio = setupAudioPlayerWithFile()
+           
+            
+            if( id < cards.count && !cards[id].isMatched() && (!cardsFliped.contains(card)) ){
                 sender.setImage(UIImage(named: card.getImageName()), forState: UIControlState.Normal)
                 cardsFliped.append(card)
                 if(cardsFliped.count == 2 && cardsFliped[0].getImageName()==cardsFliped[1].getImageName()){
-                    cardsFliped.removeAll()
-                    print(" Matched Cards \n")
+                    //cards match
+                    
+                    for match in cardsFliped{
+                        match.setMatched(true)
+                    }
                     var matches = Int(matchCounterLbl.text!)!+1
                     matchCounterLbl.text = "\(matches)"
+                    cardsFliped.removeAll()
+                    
                     if((cards.count / 2) == matches){
+                        //game won
                         wonCounterLbl.text = "\(Int(wonCounterLbl.text!)!+1)"
                     }
                 }else {
-                    NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "update", userInfo: nil, repeats: false)
+                    NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "wait", userInfo: nil, repeats: false)
                 }
             }
             
@@ -106,13 +120,32 @@ class MatchingViewController: UIViewController {
         }
     }
     
+    @IBAction func newGameSelected(sender: UIButton) {
+        setupGame()
+    }
     
-    // must be internal or public.
-    func update() {
+    @IBAction func resetGamesSelected(sender: UIButton) {
+        resetGames()
+    }
+    
+    func setupAudioPlayerWithFile() -> AVAudioPlayer  {
+        
+        if let url = NSBundle.mainBundle().URLForResource("awesome", withExtension: "wav") {
+            do {
+                return try AVAudioPlayer(contentsOfURL: url)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+        return AVAudioPlayer()
+    }
+    
+//internal functions
+    func wait() {
         if(cardsFliped.count == 2){
             print("reset cards \n")
             for card in cardsFliped{
-                cards[card.getTagID()].setIsFliped(false)
+                cards[card.getTagID()].setFliped(false)
                 cardsBtn[card.getTagID()].setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
             }
             cardsFliped.removeAll()
@@ -162,5 +195,17 @@ class MatchingViewController: UIViewController {
         return fullRandomCards
     }
 
+    func setupGame(){
+        matchCounterLbl.text = "0"
+        cards = layoutCards()
+        for button in cardsBtn{
+            button.setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
+        }
+    }
+    
+    func resetGames(){
+        wonCounterLbl.text = "0"
+        setupGame()
+    }
 }
 

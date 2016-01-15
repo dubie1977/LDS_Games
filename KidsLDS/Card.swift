@@ -10,33 +10,33 @@ import Foundation
 
 class Card: NSObject {
 
-    private var isFliped :Bool
-    private var isMatched :Bool
+    private var fliped :Bool
+    private var matched :Bool
     private var tagID: Int
     private var imageName: String
     
 
     init(id: Int, imageName: String){
-        isFliped=false
-        isMatched=false
+        fliped=false
+        matched=false
         tagID=id
         self.imageName = imageName
     }
     
-    func getIsFliped()-> Bool{
-        return isFliped
+    func isFliped()-> Bool{
+        return fliped
     }
     
-    func setIsFliped(isFliped: Bool){
-        self.isFliped=isFliped
+    func setFliped(isFliped: Bool){
+        self.fliped=isFliped
     }
     
-    func getIsMatched()->Bool{
-        return isMatched
+    func isMatched()->Bool{
+        return matched
     }
     
-    func setIsMatched(isMatched: Bool){
-        self.isMatched=isMatched
+    func setMatched(isMatched: Bool){
+        self.matched=isMatched
     }
     
     func getImageName()->String{

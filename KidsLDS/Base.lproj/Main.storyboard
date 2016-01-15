@@ -22,14 +22,14 @@
                                 <color key="backgroundColor" red="1" green="0.99006434176854108" blue="0.95605938608055019" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.98169584424083767" green="0.98169584424083767" blue="0.98169584424083767" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="q9l-U7-Sab">
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="q9l-U7-Sab">
                                 <rect key="frame" x="0.0" y="15" width="600" height="585"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="WVp-9G-Dk8" userLabel="titleStack">
-                                        <rect key="frame" x="242" y="0.0" width="117" height="30"/>
+                                        <rect key="frame" x="241.5" y="0.0" width="117" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LDS Presidents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgw-Ni-S3J">
-                                                <rect key="frame" x="0.0" y="0.0" width="117" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="117" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="bev-jg-ceX"/>
                                                 </constraints>
@@ -44,38 +44,42 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Dms-OD-azI"/>
+                                            <constraint firstAttribute="height" constant="35" id="Dms-OD-azI"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XtU-eq-6h2" userLabel="currentGameStack">
-                                        <rect key="frame" x="188" y="35" width="224" height="20"/>
+                                        <rect key="frame" x="188" y="40" width="224" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Matches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5B-fz-LQc" userLabel="currentMatchesLbl">
-                                                <rect key="frame" x="0.0" y="0.0" width="129" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="128.5" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwg-vr-VwU" userLabel="matchCounterLbl">
-                                                <rect key="frame" x="134" y="0.0" width="11" height="20"/>
+                                                <rect key="frame" x="133.5" y="0.0" width="10.5" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1g-qz-cuR" userLabel="newGameBtn">
-                                                <rect key="frame" x="149" y="0.0" width="75" height="20"/>
+                                                <rect key="frame" x="149" y="0.0" width="75" height="35"/>
+                                                <color key="backgroundColor" red="0.56364690633234737" green="1" blue="0.43822574690610172" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="New Game"/>
+                                                <connections>
+                                                    <action selector="newGameSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwD-p1-gz9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="DgC-0Q-6Kk"/>
+                                            <constraint firstAttribute="height" constant="35" id="DgC-0Q-6Kk"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iIw-UI-pU2" userLabel="row1Stack">
-                                        <rect key="frame" x="0.0" y="60" width="600" height="122"/>
+                                    <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iIw-UI-pU2" userLabel="row1Stack">
+                                        <rect key="frame" x="0.0" y="80" width="600" height="113"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxs-Sw-EhT" userLabel="card1Btn">
-                                                <rect key="frame" x="0.0" y="0.0" width="147" height="122"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="113"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
@@ -83,21 +87,21 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-Ma-eG2" userLabel="card2Btn">
-                                                <rect key="frame" x="152" y="0.0" width="146" height="122"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="146" height="113"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1cG-EZ-hMp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="No0-gP-NNV" userLabel="card3Btn">
-                                                <rect key="frame" x="303" y="0.0" width="147" height="122"/>
+                                                <rect key="frame" x="302.5" y="0.0" width="146.5" height="113"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PxW-Ed-20f"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKG-u9-u5g" userLabel="card4Btn">
-                                                <rect key="frame" x="454" y="0.0" width="146" height="122"/>
+                                                <rect key="frame" x="454" y="0.0" width="146" height="113"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGQ-Ja-bzh"/>
@@ -106,31 +110,31 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ew4-g3-Ft6" userLabel="row2Stack">
-                                        <rect key="frame" x="0.0" y="187" width="600" height="121"/>
+                                        <rect key="frame" x="0.0" y="198" width="600" height="112"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDK-rb-bHc" userLabel="card5Btn">
-                                                <rect key="frame" x="0.0" y="0.0" width="147" height="121"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="112"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpD-oc-7Q6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llz-0H-ZdX" userLabel="card6Btn">
-                                                <rect key="frame" x="152" y="0.0" width="146" height="121"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="146" height="112"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Rg-5I-Uy0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Y1-KR-Mqm" userLabel="card7Btn">
-                                                <rect key="frame" x="303" y="0.0" width="147" height="121"/>
+                                                <rect key="frame" x="302.5" y="0.0" width="146.5" height="112"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="koc-N5-kIh"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgF-E4-wAJ" userLabel="card8Btn">
-                                                <rect key="frame" x="454" y="0.0" width="146" height="121"/>
+                                                <rect key="frame" x="454" y="0.0" width="146" height="112"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PmX-4x-aSM"/>
@@ -139,31 +143,31 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bqi-ZU-l0f" userLabel="row3Stack">
-                                        <rect key="frame" x="0.0" y="313" width="600" height="122"/>
+                                        <rect key="frame" x="0.0" y="315" width="600" height="113"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGc-4m-jdD" userLabel="card9Btn">
-                                                <rect key="frame" x="0.0" y="0.0" width="147" height="122"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="113"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ndw-VD-452"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvB-Zp-cws" userLabel="card10Btn">
-                                                <rect key="frame" x="152" y="0.0" width="146" height="122"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="146" height="113"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kmn-QC-GKy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DA-Md-vcd" userLabel="card11Btn">
-                                                <rect key="frame" x="303" y="0.0" width="147" height="122"/>
+                                                <rect key="frame" x="302.5" y="0.0" width="146.5" height="113"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AW0-zk-cHg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WM4-pg-YdB" userLabel="card12Btn">
-                                                <rect key="frame" x="454" y="0.0" width="146" height="122"/>
+                                                <rect key="frame" x="454" y="0.0" width="146" height="113"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcE-3t-QVt"/>
@@ -172,31 +176,31 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rgN-Nz-IrD" userLabel="row4Stack">
-                                        <rect key="frame" x="0.0" y="439" width="600" height="121"/>
+                                        <rect key="frame" x="0.0" y="433" width="600" height="112"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40E-pI-Aqo" userLabel="card13Btn">
-                                                <rect key="frame" x="0.0" y="0.0" width="147" height="121"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="112"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0qh-On-cuv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yX-ab-G3F" userLabel="card14Btn">
-                                                <rect key="frame" x="152" y="0.0" width="146" height="121"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="146" height="112"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TlY-CN-TP6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osL-Is-d3V" userLabel="card15Btn">
-                                                <rect key="frame" x="303" y="0.0" width="147" height="121"/>
+                                                <rect key="frame" x="302.5" y="0.0" width="146.5" height="112"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ram-89-Vqt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siw-mI-Nn0" userLabel="card16Btn">
-                                                <rect key="frame" x="454" y="0.0" width="146" height="121"/>
+                                                <rect key="frame" x="454" y="0.0" width="146" height="112"/>
                                                 <state key="normal" image="cardBack"/>
                                                 <connections>
                                                     <action selector="cardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rd6-xn-eby"/>
@@ -204,28 +208,32 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-13-MXK" userLabel="historyStack">
-                                        <rect key="frame" x="209" y="565" width="184" height="20"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-13-MXK" userLabel="historyStack">
+                                        <rect key="frame" x="182.5" y="550" width="235.5" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games Won" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajV-Fj-bdZ" userLabel="gamesWonLbl">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="20"/>
+                                                <rect key="frame" x="0.0" y="7.5" width="92.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-hg-iCv" userLabel="wonCounterLbl">
-                                                <rect key="frame" x="98" y="0.0" width="42" height="20"/>
+                                                <rect key="frame" x="97.5" y="7.5" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmm-yj-6Nd" userLabel="resetBtn">
-                                                <rect key="frame" x="145" y="0.0" width="39" height="20"/>
-                                                <state key="normal" title="Reset"/>
+                                                <rect key="frame" x="144.5" y="2.5" width="91" height="30"/>
+                                                <color key="backgroundColor" red="0.56364690630000003" green="1" blue="0.43822574689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Reset Games"/>
+                                                <connections>
+                                                    <action selector="resetGamesSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LwP-LG-Mlt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="H7W-ba-9Ky"/>
+                                            <constraint firstAttribute="height" constant="35" id="H7W-ba-9Ky"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>

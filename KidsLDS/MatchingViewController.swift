@@ -40,6 +40,8 @@ class MatchingViewController: UIViewController {
     var cards = [Card]()
     var cardsBtn = [UIButton]()
     let cardBackground = "cardBack.jpg"
+    var cardFlippedSound = AVAudioPlayer()
+    var matchFoundSound = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +73,20 @@ class MatchingViewController: UIViewController {
         
         resetGames()
         
+        //sound
+        /*
+        let path = NSBundle.mainBundle().pathForResource("07_coin", ofType: ".wav")
+        let soundURL = NSURL(fileURLWithPath: path!)
         
+        do{
+            try cardFlippedSound = AVAudioPlayer(contentsOfURL: soundURL)
+            cardFlippedSound.prepareToPlay()
+        } catch let err as NSError{
+            print(err.debugDescription)
+        } */
+        
+        cardFlippedSound = getSoundFromFile("07_coin", fileType: ".wav")
+        matchFoundSound = getSoundFromFile("awesome", fileType: ".wav")
         
     }
 
@@ -81,6 +96,21 @@ class MatchingViewController: UIViewController {
     }
     
     
+    func getSoundFromFile(fileName: String, fileType: String) -> AVAudioPlayer{
+        var sound = AVAudioPlayer()
+        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: fileType)
+        let soundURL = NSURL(fileURLWithPath: path!)
+        
+        do{
+            try sound = AVAudioPlayer(contentsOfURL: soundURL)
+            sound.prepareToPlay()
+        } catch let err as NSError{
+            print(err.debugDescription)
+        }
+        
+        return sound
+    }
+    
     
     
 
@@ -88,22 +118,22 @@ class MatchingViewController: UIViewController {
 //Action functions
     @IBAction func cardSelected(sender: UIButton) {
         if(cardsFliped.count < 2){
-            var id = sender.tag
-            var card = cards[id]
+            let id = sender.tag
+            let card = cards[id]
             
-            var audio = setupAudioPlayerWithFile()
-           
+            cardFlippedSound.play()
             
             if( id < cards.count && !cards[id].isMatched() && (!cardsFliped.contains(card)) ){
                 sender.setImage(UIImage(named: card.getImageName()), forState: UIControlState.Normal)
                 cardsFliped.append(card)
                 if(cardsFliped.count == 2 && cardsFliped[0].getImageName()==cardsFliped[1].getImageName()){
                     //cards match
+                    matchFoundSound.play()
                     
                     for match in cardsFliped{
                         match.setMatched(true)
                     }
-                    var matches = Int(matchCounterLbl.text!)!+1
+                    let matches = Int(matchCounterLbl.text!)!+1
                     matchCounterLbl.text = "\(matches)"
                     cardsFliped.removeAll()
                     
@@ -175,8 +205,8 @@ class MatchingViewController: UIViewController {
         //builds the deck of cards
         var semiRandomCards = [Card]()
         for (var i = 0; i<8; i++){
-            var randomNumber = Int(arc4random_uniform(UInt32(all16Cards.count)))
-            var card = all16Cards.removeAtIndex(randomNumber)
+            let randomNumber = Int(arc4random_uniform(UInt32(all16Cards.count)))
+            let card = all16Cards.removeAtIndex(randomNumber)
             semiRandomCards.append(card)
             semiRandomCards.append(Card(id: card.getTagID(), imageName: card.getImageName()))
         }
@@ -184,8 +214,8 @@ class MatchingViewController: UIViewController {
         //randomizes the card locations
         var fullRandomCards = [Card]()
         for (var i = 0; i<16; i++){
-            var randomNumber = Int(arc4random_uniform(UInt32(semiRandomCards.count)))
-            var card = semiRandomCards.removeAtIndex(randomNumber)
+            let randomNumber = Int(arc4random_uniform(UInt32(semiRandomCards.count)))
+            let card = semiRandomCards.removeAtIndex(randomNumber)
             card.setTagID(i)
             fullRandomCards.append(card)
         }

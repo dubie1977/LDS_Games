@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MatchingGameVC" customModule="KidsLDS" customModuleProvider="target">
@@ -14,17 +16,77 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-Qr-tSr" customClass="CardIV" customModule="KidsLDS" customModuleProvider="target">
-                    <rect key="frame" x="24" y="23" width="240" height="128"/>
-                    <color key="backgroundColor" red="0.26296891950000001" green="1" blue="0.3109781485" alpha="1" colorSpace="calibratedRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card 0" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-Qr-tSr" customClass="CardIV" customModule="KidsLDS" customModuleProvider="target">
+                    <rect key="frame" x="37" y="116" width="102" height="128"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kti-Dt-g5N">
-                    <rect key="frame" x="292" y="23" width="240" height="128"/>
-                    <color key="backgroundColor" red="0.26296891950000001" green="1" blue="0.3109781485" alpha="1" colorSpace="calibratedRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card 2" translatesAutoresizingMaskIntoConstraints="NO" id="szd-da-jGv">
+                    <rect key="frame" x="286" y="116" width="102" height="128"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card 1" translatesAutoresizingMaskIntoConstraints="NO" id="fLE-US-mgW">
+                    <rect key="frame" x="406" y="116" width="102" height="128"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card 1" translatesAutoresizingMaskIntoConstraints="NO" id="kti-Dt-g5N">
+                    <rect key="frame" x="166" y="116" width="102" height="128"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bar" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-Ut-SF8">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="nV6-m6-Yl0"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQU-04-OLL">
+                    <rect key="frame" x="8" y="13" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="M89-HD-hCC"/>
+                        <constraint firstAttribute="width" constant="50" id="zQ0-zN-8e0"/>
+                    </constraints>
+                    <state key="normal" image="Back Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oA4-QR-MDR">
+                    <rect key="frame" x="530" y="18" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5CQ-B9-8f5"/>
+                        <constraint firstAttribute="width" constant="50" id="sbG-ip-MZ2"/>
+                    </constraints>
+                    <state key="normal" image="Setting Button"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="RJe-4w-UeY">
+                    <rect key="frame" x="154" y="5" width="270" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="QQ9-X5-QI7"/>
+                        <constraint firstAttribute="width" constant="300" id="ksw-ak-Kd0"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gcf-Ut-SF8" secondAttribute="trailing" id="5DY-iM-9XD"/>
+                <constraint firstItem="xQU-04-OLL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="3" id="BXv-5h-gJp"/>
+                <constraint firstItem="gcf-Ut-SF8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IYr-67-9aY"/>
+                <constraint firstItem="oA4-QR-MDR" firstAttribute="centerY" secondItem="gcf-Ut-SF8" secondAttribute="centerY" id="MNw-YX-OMd"/>
+                <constraint firstItem="RJe-4w-UeY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OZK-n8-UG0"/>
+                <constraint firstAttribute="trailingMargin" secondItem="oA4-QR-MDR" secondAttribute="trailing" constant="23" id="Qih-YP-6Qg"/>
+                <constraint firstItem="xQU-04-OLL" firstAttribute="centerY" secondItem="gcf-Ut-SF8" secondAttribute="centerY" id="b2e-Do-o61"/>
+                <constraint firstItem="oA4-QR-MDR" firstAttribute="centerY" secondItem="RJe-4w-UeY" secondAttribute="centerY" id="cbd-Ml-572"/>
+                <constraint firstItem="RJe-4w-UeY" firstAttribute="width" secondItem="gcf-Ut-SF8" secondAttribute="height" multiplier="18:5" id="iOq-UG-7wd"/>
+                <constraint firstItem="gcf-Ut-SF8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nVM-oU-oD5"/>
+                <constraint firstItem="RJe-4w-UeY" firstAttribute="centerY" secondItem="xQU-04-OLL" secondAttribute="centerY" id="npv-3s-uof"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="iOq-UG-7wd"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="396" y="438"/>
         </view>
     </objects>
+    <resources>
+        <image name="Back Button" width="34" height="34"/>
+        <image name="Bar" width="1024" height="47"/>
+        <image name="Card 0" width="127" height="162"/>
+        <image name="Card 1" width="127" height="162"/>
+        <image name="Card 2" width="128" height="162"/>
+        <image name="Setting Button" width="30" height="30"/>
+        <image name="Title" width="344" height="34"/>
+    </resources>
 </document>

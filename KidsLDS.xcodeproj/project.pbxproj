@@ -14,12 +14,15 @@
 		8C10E8BF1C421D4E00C837D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8BD1C421D4E00C837D0 /* LaunchScreen.storyboard */; };
 		8C10E8CA1C421D4E00C837D0 /* KidsLDSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8C91C421D4E00C837D0 /* KidsLDSTests.swift */; };
 		8C10E8D51C421D4E00C837D0 /* KidsLDSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8D41C421D4E00C837D0 /* KidsLDSUITests.swift */; };
-		8C10E8E31C44C76000C837D0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8E21C44C76000C837D0 /* Card.swift */; };
+		8C10E8E31C44C76000C837D0 /* CardOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8E21C44C76000C837D0 /* CardOld.swift */; };
 		8C10E8E51C545A9800C837D0 /* 07_coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8E41C545A9800C837D0 /* 07_coin.wav */; };
 		8C10E8E81C54669F00C837D0 /* awesome.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8E71C54669F00C837D0 /* awesome.wav */; };
+		8C32E6931CCC9CC700FDB802 /* ProphetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E6921CCC9CC700FDB802 /* ProphetCard.swift */; };
+		8C32E6951CCC9FAD00FDB802 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32E6941CCC9FAD00FDB802 /* Deck.swift */; };
 		8C94DF9C1CC35C9A00CC94BE /* MatchingGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DF9A1CC35C9A00CC94BE /* MatchingGameVC.swift */; };
 		8C94DF9D1CC35C9A00CC94BE /* MatchingGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C94DF9B1CC35C9A00CC94BE /* MatchingGameVC.xib */; };
 		8C94DF9F1CC4A24200CC94BE /* CardIV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94DF9E1CC4A24200CC94BE /* CardIV.swift */; };
+		8CC6CCB31CC8584A00D8F4A4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6CCB21CC8584A00D8F4A4 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +56,15 @@
 		8C10E8D01C421D4E00C837D0 /* KidsLDSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidsLDSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C10E8D41C421D4E00C837D0 /* KidsLDSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsLDSUITests.swift; sourceTree = "<group>"; };
 		8C10E8D61C421D4E00C837D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C10E8E21C44C76000C837D0 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8C10E8E21C44C76000C837D0 /* CardOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardOld.swift; sourceTree = "<group>"; };
 		8C10E8E41C545A9800C837D0 /* 07_coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 07_coin.wav; sourceTree = "<group>"; };
 		8C10E8E71C54669F00C837D0 /* awesome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = awesome.wav; sourceTree = "<group>"; };
+		8C32E6921CCC9CC700FDB802 /* ProphetCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProphetCard.swift; sourceTree = "<group>"; };
+		8C32E6941CCC9FAD00FDB802 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		8C94DF9A1CC35C9A00CC94BE /* MatchingGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingGameVC.swift; sourceTree = "<group>"; };
 		8C94DF9B1CC35C9A00CC94BE /* MatchingGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchingGameVC.xib; sourceTree = "<group>"; };
 		8C94DF9E1CC4A24200CC94BE /* CardIV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardIV.swift; sourceTree = "<group>"; };
+		8CC6CCB21CC8584A00D8F4A4 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +120,6 @@
 				8C94DF951CC35B0400CC94BE /* Model */,
 				8C10E8E61C545AF300C837D0 /* Sounds */,
 				8C10E8B41C421D4E00C837D0 /* AppDelegate.swift */,
-				8C10E8B61C421D4E00C837D0 /* MatchingViewController.swift */,
 				8C10E8B81C421D4E00C837D0 /* Main.storyboard */,
 				8C10E8BB1C421D4E00C837D0 /* Assets.xcassets */,
 				8C10E8BD1C421D4E00C837D0 /* LaunchScreen.storyboard */,
@@ -153,8 +158,11 @@
 		8C94DF951CC35B0400CC94BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8C10E8E21C44C76000C837D0 /* Card.swift */,
+				8C10E8E21C44C76000C837D0 /* CardOld.swift */,
 				8C94DF9E1CC4A24200CC94BE /* CardIV.swift */,
+				8CC6CCB21CC8584A00D8F4A4 /* Card.swift */,
+				8C32E6921CCC9CC700FDB802 /* ProphetCard.swift */,
+				8C32E6941CCC9FAD00FDB802 /* Deck.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 		8C94DF971CC35B2200CC94BE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8C10E8B61C421D4E00C837D0 /* MatchingViewController.swift */,
 				8C94DF9A1CC35C9A00CC94BE /* MatchingGameVC.swift */,
 			);
 			name = Controller;
@@ -313,9 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C10E8B71C421D4E00C837D0 /* MatchingViewController.swift in Sources */,
+				8CC6CCB31CC8584A00D8F4A4 /* Card.swift in Sources */,
 				8C94DF9C1CC35C9A00CC94BE /* MatchingGameVC.swift in Sources */,
 				8C94DF9F1CC4A24200CC94BE /* CardIV.swift in Sources */,
-				8C10E8E31C44C76000C837D0 /* Card.swift in Sources */,
+				8C32E6951CCC9FAD00FDB802 /* Deck.swift in Sources */,
+				8C32E6931CCC9CC700FDB802 /* ProphetCard.swift in Sources */,
+				8C10E8E31C44C76000C837D0 /* CardOld.swift in Sources */,
 				8C10E8B51C421D4E00C837D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

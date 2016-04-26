@@ -2,39 +2,46 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MatchingGameVC" customModule="KidsLDS" customModuleProvider="target">
             <connections>
+                <outlet property="Card0" destination="CO3-cC-pZD" id="SaZ-66-Xat"/>
+                <outlet property="Card1" destination="Y1U-7t-2yC" id="YzV-jv-Stz"/>
+                <outlet property="backBtn" destination="xQU-04-OLL" id="tYK-7Y-snT"/>
+                <outlet property="card0" destination="CO3-cC-pZD" id="Q7q-Wb-YkC"/>
+                <outlet property="card1" destination="Y1U-7t-2yC" id="Kbr-jP-1VE"/>
+                <outlet property="card10" destination="6pv-O2-IaS" id="MRB-Q0-Bsg"/>
+                <outlet property="card11" destination="BrT-9v-SU5" id="bfL-hL-7Ws"/>
+                <outlet property="card12" destination="oE6-Ba-tYa" id="ekP-RB-gLg"/>
+                <outlet property="card13" destination="JP1-z4-ZFt" id="Ky2-bq-ecD"/>
+                <outlet property="card14" destination="Lki-3Y-VPd" id="JJk-cN-Ub6"/>
+                <outlet property="card15" destination="v92-37-Jxk" id="mCC-ya-hDh"/>
+                <outlet property="card2" destination="7qU-i9-fbN" id="irq-k5-t3N"/>
+                <outlet property="card3" destination="Z8y-nY-g9E" id="Jo8-m7-6XU"/>
+                <outlet property="card4" destination="uXV-Ye-s6E" id="2b7-ZV-gr4"/>
+                <outlet property="card5" destination="var-nH-c6t" id="nUE-iG-HQJ"/>
+                <outlet property="card6" destination="1y6-1f-26w" id="7Ie-eq-o5t"/>
+                <outlet property="card7" destination="68H-aS-prj" id="FiL-Eh-538"/>
+                <outlet property="card8" destination="fhb-4Z-nla" id="xaM-hn-4yA"/>
+                <outlet property="card9" destination="P4a-4Z-71k" id="H0C-9j-dEb"/>
+                <outlet property="settingBtn" destination="oA4-QR-MDR" id="fdO-mZ-bZz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card 0" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-Qr-tSr" customClass="CardIV" customModule="KidsLDS" customModuleProvider="target">
-                    <rect key="frame" x="37" y="116" width="102" height="128"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card 2" translatesAutoresizingMaskIntoConstraints="NO" id="szd-da-jGv">
-                    <rect key="frame" x="286" y="116" width="102" height="128"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card 1" translatesAutoresizingMaskIntoConstraints="NO" id="fLE-US-mgW">
-                    <rect key="frame" x="406" y="116" width="102" height="128"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card 1" translatesAutoresizingMaskIntoConstraints="NO" id="kti-Dt-g5N">
-                    <rect key="frame" x="166" y="116" width="102" height="128"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bar" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-Ut-SF8">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bar" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-Ut-SF8" userLabel="MenueBarImg">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="75"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="75" id="nV6-m6-Yl0"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQU-04-OLL">
+                <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQU-04-OLL" userLabel="BackBtn">
                     <rect key="frame" x="8" y="13" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="M89-HD-hCC"/>
@@ -42,16 +49,169 @@
                     </constraints>
                     <state key="normal" image="Back Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oA4-QR-MDR">
-                    <rect key="frame" x="530" y="18" width="50" height="50"/>
+                <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oA4-QR-MDR" userLabel="SettingsBtn">
+                    <rect key="frame" x="966" y="18" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5CQ-B9-8f5"/>
                         <constraint firstAttribute="width" constant="50" id="sbG-ip-MZ2"/>
                     </constraints>
                     <state key="normal" image="Setting Button"/>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="RJe-4w-UeY">
-                    <rect key="frame" x="154" y="5" width="270" height="63"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tub-8U-Nnx" userLabel="GameBoardStk">
+                    <rect key="frame" x="228" y="83" width="568" height="678"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Api-ua-hrT" userLabel="Row 1">
+                            <rect key="frame" x="0.0" y="0.0" width="568" height="162"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-cC-pZD" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="127" id="FKM-gX-WGQ"/>
+                                        <constraint firstAttribute="height" constant="162" id="ZeF-T6-IJ5"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 0"/>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1U-7t-2yC" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="147" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="Rq9-Nf-YMb"/>
+                                        <constraint firstAttribute="width" constant="127" id="vaa-Fl-9P5"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 1"/>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qU-i9-fbN" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="294" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="127" id="fZ3-uy-49f"/>
+                                        <constraint firstAttribute="height" constant="162" id="t4A-uf-eTp"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 2"/>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-nY-g9E" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="441" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="127" id="bxq-Fx-Y9I"/>
+                                        <constraint firstAttribute="height" constant="162" id="kd4-wf-cS2"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 3"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rFh-Sj-d0x" userLabel="Row 2">
+                            <rect key="frame" x="0.0" y="172" width="568" height="162"/>
+                            <subviews>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXV-Ye-s6E" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="VK2-ZJ-Jd9"/>
+                                        <constraint firstAttribute="width" constant="127" id="mFQ-hQ-eOl"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 0"/>
+                                </button>
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="var-nH-c6t" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="147" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="127" id="0ih-pU-WM2"/>
+                                        <constraint firstAttribute="height" constant="162" id="70X-HT-fgJ"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 1"/>
+                                </button>
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1y6-1f-26w" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="294" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="127" id="MIy-gO-0aw"/>
+                                        <constraint firstAttribute="height" constant="162" id="uWB-dy-O2L"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 2"/>
+                                </button>
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68H-aS-prj" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="441" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="GAF-Zn-fy4"/>
+                                        <constraint firstAttribute="width" constant="127" id="X8q-5j-z5j"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 3"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gb3-vX-fAT" userLabel="Row 3">
+                            <rect key="frame" x="0.0" y="344" width="568" height="162"/>
+                            <subviews>
+                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhb-4Z-nla" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="Bf3-bn-tju"/>
+                                        <constraint firstAttribute="width" constant="127" id="oB8-P5-xqu"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 0"/>
+                                </button>
+                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4a-4Z-71k" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="147" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="127" id="GBu-GY-ctJ"/>
+                                        <constraint firstAttribute="height" constant="162" id="HRm-S6-OEY"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 1"/>
+                                </button>
+                                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pv-O2-IaS" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="294" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="127" id="QoI-yJ-aLU"/>
+                                        <constraint firstAttribute="height" constant="162" id="yFu-aW-MkC"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 2"/>
+                                </button>
+                                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrT-9v-SU5" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="441" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="LNw-tQ-81m"/>
+                                        <constraint firstAttribute="width" constant="127" id="wi2-mI-TJ4"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 3"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9ju-Ys-T3f" userLabel="Row 4">
+                            <rect key="frame" x="0.0" y="516" width="568" height="162"/>
+                            <subviews>
+                                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oE6-Ba-tYa" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="C2i-Iq-UBo"/>
+                                        <constraint firstAttribute="width" constant="127" id="XyD-ql-iwl"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 0"/>
+                                </button>
+                                <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JP1-z4-ZFt" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="147" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="127" id="OPc-Jy-pKd"/>
+                                        <constraint firstAttribute="height" constant="162" id="k5G-IN-57M"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 1"/>
+                                </button>
+                                <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lki-3Y-VPd" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="294" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="2w9-J0-nES"/>
+                                        <constraint firstAttribute="width" constant="127" id="aBj-dD-C0W"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 2"/>
+                                </button>
+                                <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v92-37-Jxk" customClass="ProphetCard" customModule="KidsLDS" customModuleProvider="target">
+                                    <rect key="frame" x="441" y="0.0" width="127" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="bGD-RW-SP5"/>
+                                        <constraint firstAttribute="width" constant="127" id="l7b-YE-GRe"/>
+                                    </constraints>
+                                    <state key="normal" image="Card 3"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="RJe-4w-UeY" userLabel="TitleImg">
+                    <rect key="frame" x="377" y="13" width="270" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="63" id="QQ9-X5-QI7"/>
                         <constraint firstAttribute="width" constant="300" id="ksw-ak-Kd0"/>
@@ -62,30 +222,40 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="gcf-Ut-SF8" secondAttribute="trailing" id="5DY-iM-9XD"/>
                 <constraint firstItem="xQU-04-OLL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="3" id="BXv-5h-gJp"/>
+                <constraint firstItem="gcf-Ut-SF8" firstAttribute="bottom" secondItem="xQU-04-OLL" secondAttribute="bottom" constant="10" id="CGe-uZ-c4m"/>
+                <constraint firstItem="gcf-Ut-SF8" firstAttribute="bottom" secondItem="oA4-QR-MDR" secondAttribute="bottom" constant="10" id="Car-w4-rB9"/>
                 <constraint firstItem="gcf-Ut-SF8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IYr-67-9aY"/>
                 <constraint firstItem="oA4-QR-MDR" firstAttribute="centerY" secondItem="gcf-Ut-SF8" secondAttribute="centerY" id="MNw-YX-OMd"/>
                 <constraint firstItem="RJe-4w-UeY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OZK-n8-UG0"/>
-                <constraint firstAttribute="trailingMargin" secondItem="oA4-QR-MDR" secondAttribute="trailing" constant="23" id="Qih-YP-6Qg"/>
+                <constraint firstAttribute="trailingMargin" secondItem="oA4-QR-MDR" secondAttribute="trailing" constant="15" id="Qih-YP-6Qg"/>
+                <constraint firstItem="tub-8U-Nnx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VRy-Qa-gc9"/>
                 <constraint firstItem="xQU-04-OLL" firstAttribute="centerY" secondItem="gcf-Ut-SF8" secondAttribute="centerY" id="b2e-Do-o61"/>
                 <constraint firstItem="oA4-QR-MDR" firstAttribute="centerY" secondItem="RJe-4w-UeY" secondAttribute="centerY" id="cbd-Ml-572"/>
-                <constraint firstItem="RJe-4w-UeY" firstAttribute="width" secondItem="gcf-Ut-SF8" secondAttribute="height" multiplier="18:5" id="iOq-UG-7wd"/>
                 <constraint firstItem="gcf-Ut-SF8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nVM-oU-oD5"/>
                 <constraint firstItem="RJe-4w-UeY" firstAttribute="centerY" secondItem="xQU-04-OLL" secondAttribute="centerY" id="npv-3s-uof"/>
+                <constraint firstItem="RJe-4w-UeY" firstAttribute="bottom" secondItem="gcf-Ut-SF8" secondAttribute="bottom" id="tBy-nY-hmd"/>
+                <constraint firstItem="tub-8U-Nnx" firstAttribute="top" secondItem="gcf-Ut-SF8" secondAttribute="bottom" constant="8" id="yY1-u0-SoC"/>
             </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
             <variation key="default">
                 <mask key="constraints">
-                    <exclude reference="iOq-UG-7wd"/>
+                    <exclude reference="b2e-Do-o61"/>
+                    <exclude reference="npv-3s-uof"/>
+                    <exclude reference="MNw-YX-OMd"/>
+                    <exclude reference="cbd-Ml-572"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="396" y="438"/>
+            <point key="canvasLocation" x="324" y="470"/>
         </view>
     </objects>
     <resources>
-        <image name="Back Button" width="34" height="34"/>
+        <image name="Back Button" width="34" height="32"/>
         <image name="Bar" width="1024" height="47"/>
         <image name="Card 0" width="127" height="162"/>
         <image name="Card 1" width="127" height="162"/>
         <image name="Card 2" width="128" height="162"/>
+        <image name="Card 3" width="128" height="162"/>
         <image name="Setting Button" width="30" height="30"/>
         <image name="Title" width="344" height="34"/>
     </resources>

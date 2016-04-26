@@ -36,8 +36,8 @@ class MatchingViewController: UIViewController {
     @IBOutlet weak var newGameBtn: UIButton!
     
     //local vars
-    var cardsFliped = [Card]()
-    var cards = [Card]()
+    var cardsFliped = [CardOld]()
+    var cards = [CardOld]()
     var cardsBtn = [UIButton]()
     let cardBackground = "cardBack.jpg"
     var cardFlippedSound = AVAudioPlayer()
@@ -183,36 +183,36 @@ class MatchingViewController: UIViewController {
     }
     
     
-    func layoutCards()->[Card]{
-        var all16Cards = [Card]()
-        all16Cards.append(Card(id:  0, imageName: "1_JosephSmith.jpg"))
-        all16Cards.append(Card(id:  1, imageName: "2_BrighamYoung.jpg"))
-        all16Cards.append(Card(id:  2, imageName: "3_JohnTaylor.jpg"))
-        all16Cards.append(Card(id:  3, imageName: "4_WilfordWoodruff.jpg"))
-        all16Cards.append(Card(id:  4, imageName: "5_LorenzoSnow.jpg"))
-        all16Cards.append(Card(id:  5, imageName: "6_JosephFSmith.jpg"))
-        all16Cards.append(Card(id:  6, imageName: "7_HeberJGrant.jpg"))
-        all16Cards.append(Card(id:  7, imageName: "8_GeorgeAlbertSmith.jpg"))
-        all16Cards.append(Card(id:  8, imageName: "9_DavidOMcKay.jpg"))
-        all16Cards.append(Card(id:  9, imageName: "10_JosephFieldingSmith.jpg"))
-        all16Cards.append(Card(id: 10, imageName: "11_HaroldBLee.jpg"))
-        all16Cards.append(Card(id: 11, imageName: "12_SpencerWKimball.jpg"))
-        all16Cards.append(Card(id: 12, imageName: "13_EzraTaftBenson.jpg"))
-        all16Cards.append(Card(id: 13, imageName: "14_HowardWHunter.jpg"))
-        all16Cards.append(Card(id: 14, imageName: "15_GordonBHinckley.jpg"))
-        all16Cards.append(Card(id: 15, imageName: "16_ThomasSMonson.jpg"))
+    func layoutCards()->[CardOld]{
+        var all16Cards = [CardOld]()
+        all16Cards.append(CardOld(id:  0, imageName: "1_JosephSmith.jpg"))
+        all16Cards.append(CardOld(id:  1, imageName: "2_BrighamYoung.jpg"))
+        all16Cards.append(CardOld(id:  2, imageName: "3_JohnTaylor.jpg"))
+        all16Cards.append(CardOld(id:  3, imageName: "4_WilfordWoodruff.jpg"))
+        all16Cards.append(CardOld(id:  4, imageName: "5_LorenzoSnow.jpg"))
+        all16Cards.append(CardOld(id:  5, imageName: "6_JosephFSmith.jpg"))
+        all16Cards.append(CardOld(id:  6, imageName: "7_HeberJGrant.jpg"))
+        all16Cards.append(CardOld(id:  7, imageName: "8_GeorgeAlbertSmith.jpg"))
+        all16Cards.append(CardOld(id:  8, imageName: "9_DavidOMcKay.jpg"))
+        all16Cards.append(CardOld(id:  9, imageName: "10_JosephFieldingSmith.jpg"))
+        all16Cards.append(CardOld(id: 10, imageName: "11_HaroldBLee.jpg"))
+        all16Cards.append(CardOld(id: 11, imageName: "12_SpencerWKimball.jpg"))
+        all16Cards.append(CardOld(id: 12, imageName: "13_EzraTaftBenson.jpg"))
+        all16Cards.append(CardOld(id: 13, imageName: "14_HowardWHunter.jpg"))
+        all16Cards.append(CardOld(id: 14, imageName: "15_GordonBHinckley.jpg"))
+        all16Cards.append(CardOld(id: 15, imageName: "16_ThomasSMonson.jpg"))
         
         //builds the deck of cards
-        var semiRandomCards = [Card]()
+        var semiRandomCards = [CardOld]()
         for (var i = 0; i<8; i++){
             let randomNumber = Int(arc4random_uniform(UInt32(all16Cards.count)))
             let card = all16Cards.removeAtIndex(randomNumber)
             semiRandomCards.append(card)
-            semiRandomCards.append(Card(id: card.getTagID(), imageName: card.getImageName()))
+            semiRandomCards.append(CardOld(id: card.getTagID(), imageName: card.getImageName()))
         }
         
         //randomizes the card locations
-        var fullRandomCards = [Card]()
+        var fullRandomCards = [CardOld]()
         for (var i = 0; i<16; i++){
             let randomNumber = Int(arc4random_uniform(UInt32(semiRandomCards.count)))
             let card = semiRandomCards.removeAtIndex(randomNumber)

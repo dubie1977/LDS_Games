@@ -8,18 +8,18 @@
 
 import UIKit
 
-public class ProphetCard: Deck{
+public class ProphetDeck: Deck{
     
     //private var allImages: [UIImage]
 
     public override init(){
-        super.init()
         
-        self.allImages = [UIImage]()
-        for x in 0..<15 {
-            let img = UIImage(named: "card\(x).png")
+        var allImages = [UIImage]()
+        for x in 1..<16 {
+            let img = UIImage(named: "Card \(x).png")
             allImages.append(img!)
         }
+        super.init(images: allImages)
     }
     
 

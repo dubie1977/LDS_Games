@@ -10,9 +10,12 @@ import UIKit
 
 public class Card: UIButton {
     
-    private var fliped :Bool
-    private var matched :Bool
-    private var imageName: String
+    private var _fliped :Bool
+    private var _matched :Bool
+    private var _imageName: String
+    
+    private var _frontImage: UIImage?
+    private var _backImage: UIImage?
 
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -24,53 +27,35 @@ public class Card: UIButton {
     
     override init(frame: CGRect){
         
-        self.fliped=false
-        self.matched=false
-        self.imageName = "Unknown"
+        self._fliped=false
+        self._matched=false
+        self._imageName = "Unknown"
         
         super.init(frame: frame)
         
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        self.fliped=false
-        self.matched=false
-        self.imageName = "Unknown"
+        self._fliped=false
+        self._matched=false
+        self._imageName = "Unknown"
         
         super.init(coder: aDecoder)
         
         self.alpha = 0.5
     }
     
-    
-    
-    func isFliped()-> Bool{
-        return fliped
+    var frontImage: UIImage {
+        get{
+            if let image = _frontImage {
+                return image
+            } else { return UIImage()}
+        }
+        set{
+            self._frontImage=frontImage
+        }
     }
     
-    func setFliped(isFliped: Bool){
-        self.fliped=isFliped
-    }
-    
-    func isMatched()->Bool{
-        return matched
-    }
-    
-    func setMatched(isMatched: Bool){
-        self.matched=isMatched
-    }
-    
-    func getImageName()->String{
-        return imageName
-    }
-    
-    func getTagID()->Int{
-        return self.tag
-    }
-    
-    func setTagID(tagID: Int){
-        self.tag = tagID
-    }
     
     override public func isEqual(object: AnyObject?) -> Bool {
         let otherCard = object as? CardIV

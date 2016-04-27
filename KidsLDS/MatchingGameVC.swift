@@ -34,81 +34,57 @@ class MatchingGameVC: UIViewController {
     
     
     //local vars
-    var cardsFliped = [CardOld]()
-    var cards = [CardOld]()
-    var cardsBtn = [UIButton]()
-    let cardBackground = "cardBack.jpg"
-    var cardFlippedSound = AVAudioPlayer()
-    var matchFoundSound = AVAudioPlayer()
+    var deck: Deck!
+    var board: MatchingGameBoard!
+    var cards: [Card]!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cards = [Card]()
+        //card0.setTagID(0)
+        cards.append(card0)
+        //card1.setTagID(1)
+        cards.append(card1)
+        //card2.setTagID(2)
+        cards.append(card2)
+        //card3.setTagID(3)
+        cards.append(card3)
+        //card4.setTagID(4)
+        cards.append(card4)
+        //card5.setTagID(5)
+        cards.append(card5)
+        //card6.setTagID(6)
+        cards.append(card6)
+        //card7.setTagID(7)
+        cards.append(card7)
+        //card8.setTagID(8)
+        cards.append(card8)
+        //card9.setTagID(9)
+        cards.append(card9)
+        //card10.setTagID(10)
+        cards.append(card10)
+        //card11.setTagID(11)
+        cards.append(card11)
+        //card12.setTagID(12)
+        cards.append(card12)
+        //card13.setTagID(13)
+        cards.append(card13)
+        //card14.setTagID(14)
+        cards.append(card14)
+        //card15.setTagID(15)
+        cards.append(card15)
 
-        // Do any additional setup after loading the view.
+        
+        startGame()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    func startGame(){
+
     
-    
-    
-    //Internal Functions
-    func layoutCards()->[CardOld]{
-        var all16Cards = [CardOld]()
-        all16Cards.append(CardOld(id:  0, imageName: "1_JosephSmith.jpg"))
-        all16Cards.append(CardOld(id:  1, imageName: "2_BrighamYoung.jpg"))
-        all16Cards.append(CardOld(id:  2, imageName: "3_JohnTaylor.jpg"))
-        all16Cards.append(CardOld(id:  3, imageName: "4_WilfordWoodruff.jpg"))
-        all16Cards.append(CardOld(id:  4, imageName: "5_LorenzoSnow.jpg"))
-        all16Cards.append(CardOld(id:  5, imageName: "6_JosephFSmith.jpg"))
-        all16Cards.append(CardOld(id:  6, imageName: "7_HeberJGrant.jpg"))
-        all16Cards.append(CardOld(id:  7, imageName: "8_GeorgeAlbertSmith.jpg"))
-        all16Cards.append(CardOld(id:  8, imageName: "9_DavidOMcKay.jpg"))
-        all16Cards.append(CardOld(id:  9, imageName: "10_JosephFieldingSmith.jpg"))
-        all16Cards.append(CardOld(id: 10, imageName: "11_HaroldBLee.jpg"))
-        all16Cards.append(CardOld(id: 11, imageName: "12_SpencerWKimball.jpg"))
-        all16Cards.append(CardOld(id: 12, imageName: "13_EzraTaftBenson.jpg"))
-        all16Cards.append(CardOld(id: 13, imageName: "14_HowardWHunter.jpg"))
-        all16Cards.append(CardOld(id: 14, imageName: "15_GordonBHinckley.jpg"))
-        all16Cards.append(CardOld(id: 15, imageName: "16_ThomasSMonson.jpg"))
-        
-        //builds the deck of cards
-        var semiRandomCards = [CardOld]()
-        for _ in 0 ..< 8 {
-            let randomNumber = Int(arc4random_uniform(UInt32(all16Cards.count)))
-            let card = all16Cards.removeAtIndex(randomNumber)
-            semiRandomCards.append(card)
-            semiRandomCards.append(CardOld(id: card.getTagID(), imageName: card.getImageName()))
-        }
-        
-        //randomizes the card locations
-        var fullRandomCards = [CardOld]()
-        for i in 0..<16 {
-            let randomNumber = Int(arc4random_uniform(UInt32(semiRandomCards.count)))
-            let card = semiRandomCards.removeAtIndex(randomNumber)
-            card.setTagID(i)
-            fullRandomCards.append(card)
-        }
-        
-        
-        
-        return fullRandomCards
-    }
-    
-    func setupGame(){
-        //matchCounterLbl.text = "0"
-        cards = layoutCards()
-        for button in cardsBtn{
-            button.setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
-        }
-    }
-    
-    func resetGames(){
-        //wonCounterLbl.text = "0"
-        setupGame()
+        deck = ProphetDeck()
+        cards = deck.dealCardsInPairs(cards)
     }
     
 

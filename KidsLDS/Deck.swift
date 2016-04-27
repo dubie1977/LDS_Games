@@ -11,7 +11,7 @@ import UIKit
 
 public class Deck{
     
-     var allImages: [UIImage]
+     private var allImages: [UIImage]
     
     public init(){
         allImages = [UIImage]()
@@ -21,14 +21,19 @@ public class Deck{
         }
     }
     
+    public init(images: [UIImage]){
+        self.allImages = images
+    }
+    
     public func dealCardsInPairs(cards: [Card])->[Card]{
         var allImagesCopy = [UIImage]()
-        for x in 0...allImages.count {
+        var newCards = cards
+        for x in 0..<allImages.count {
             allImagesCopy.append(allImages[x])
         }
         
         var semiRandomImages = [UIImage]()
-        for _ in 0..<(cards.count/2) {
+        for _ in 0..<(newCards.count/2) {
             let randomNumber = Int(arc4random_uniform(UInt32(allImagesCopy.count)))
             let image = allImagesCopy.removeAtIndex(randomNumber)
             semiRandomImages.append(image)
@@ -40,8 +45,8 @@ public class Deck{
         for x in 0..<semiRandomImages.count {
             let randomNumber = Int(arc4random_uniform(UInt32(semiRandomImages.count)))
             let image = semiRandomImages.removeAtIndex(randomNumber)
-            //card.setTagID(i)
-            cards[x].setImage(image, forState: UIControlState.Normal)
+            newCards[x].setImage(image, forState: UIControlState.Normal)
+            newCards[x].tag = x
         }
         
         

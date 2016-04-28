@@ -19,7 +19,9 @@ public class ProphetDeck: Deck{
             let img = UIImage(named: "Card \(x).png")
             allImages.append(img!)
         }
-        super.init(images: allImages)
+        let backImage = UIImage(named: "CardBack.png")!
+        
+        super.init(images: allImages, backImage: backImage)
     }
     
 

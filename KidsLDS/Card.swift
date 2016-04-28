@@ -14,7 +14,7 @@ public class Card: UIButton {
     private var _matched :Bool
     private var _imageName: String
     
-    private var _frontImage: UIImage?
+    private var _frontImage: UIImage!
     private var _backImage: UIImage?
 
     /*
@@ -52,7 +52,19 @@ public class Card: UIButton {
             } else { return UIImage()}
         }
         set{
-            self._frontImage=frontImage
+            self._frontImage=newValue
+        }
+        
+    }
+    
+    var backImage: UIImage {
+        get{
+            if let image = _backImage {
+                return image
+            } else { return UIImage()}
+        }
+        set{
+            self._backImage=newValue
         }
     }
     
@@ -70,7 +82,16 @@ public class Card: UIButton {
     }
     
     func playFlipToBack(){
-        playFlipCarAnimation(false)
+        
+        //playFlipCarAnimation(false)
+    }
+    
+    private func flipCard(flipToFront: Bool){
+        if(flipToFront){
+            self.setImage(frontImage, forState: UIControlState.Normal)
+        } else {
+            self.setImage(backImage, forState: UIControlState.Normal)
+        }
     }
     
     private func playFlipCarAnimation(flipToFront: Bool) {

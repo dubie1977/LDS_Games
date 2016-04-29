@@ -70,6 +70,9 @@
                                         <constraint firstAttribute="height" constant="162" id="ZeF-T6-IJ5"/>
                                     </constraints>
                                     <state key="normal" image="Card 0"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="h4G-LI-AsY"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1U-7t-2yC" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="147" y="0.0" width="127" height="162"/>
@@ -78,6 +81,9 @@
                                         <constraint firstAttribute="width" constant="127" id="vaa-Fl-9P5"/>
                                     </constraints>
                                     <state key="normal" image="Card 1"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="B9d-7x-Yma"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qU-i9-fbN" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="294" y="0.0" width="127" height="162"/>
@@ -86,6 +92,9 @@
                                         <constraint firstAttribute="height" constant="162" id="t4A-uf-eTp"/>
                                     </constraints>
                                     <state key="normal" image="Card 2"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="IpF-ZT-ybx"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-nY-g9E" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="441" y="0.0" width="127" height="162"/>
@@ -94,6 +103,9 @@
                                         <constraint firstAttribute="height" constant="162" id="kd4-wf-cS2"/>
                                     </constraints>
                                     <state key="normal" image="Card 3"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="4hZ-L9-GtX"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -107,6 +119,9 @@
                                         <constraint firstAttribute="width" constant="127" id="mFQ-hQ-eOl"/>
                                     </constraints>
                                     <state key="normal" image="Card 0"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="Kov-Si-dgy"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="var-nH-c6t" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="147" y="0.0" width="127" height="162"/>
@@ -115,6 +130,9 @@
                                         <constraint firstAttribute="height" constant="162" id="70X-HT-fgJ"/>
                                     </constraints>
                                     <state key="normal" image="Card 1"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="2gF-3X-KYr"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1y6-1f-26w" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="294" y="0.0" width="127" height="162"/>
@@ -123,6 +141,9 @@
                                         <constraint firstAttribute="height" constant="162" id="uWB-dy-O2L"/>
                                     </constraints>
                                     <state key="normal" image="Card 2"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="vek-lB-JxV"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68H-aS-prj" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="441" y="0.0" width="127" height="162"/>
@@ -131,6 +152,9 @@
                                         <constraint firstAttribute="width" constant="127" id="X8q-5j-z5j"/>
                                     </constraints>
                                     <state key="normal" image="Card 3"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="xhK-Co-aqK"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -144,6 +168,9 @@
                                         <constraint firstAttribute="width" constant="127" id="oB8-P5-xqu"/>
                                     </constraints>
                                     <state key="normal" image="Card 0"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="Lnx-dY-FSn"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4a-4Z-71k" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="147" y="0.0" width="127" height="162"/>
@@ -152,6 +179,9 @@
                                         <constraint firstAttribute="height" constant="162" id="HRm-S6-OEY"/>
                                     </constraints>
                                     <state key="normal" image="Card 1"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="LeY-74-78p"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pv-O2-IaS" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="294" y="0.0" width="127" height="162"/>
@@ -160,6 +190,9 @@
                                         <constraint firstAttribute="height" constant="162" id="yFu-aW-MkC"/>
                                     </constraints>
                                     <state key="normal" image="Card 2"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="sv0-Ad-4Z1"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrT-9v-SU5" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="441" y="0.0" width="127" height="162"/>
@@ -168,6 +201,9 @@
                                         <constraint firstAttribute="width" constant="127" id="wi2-mI-TJ4"/>
                                     </constraints>
                                     <state key="normal" image="Card 3"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="XI0-6p-9QA"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -181,6 +217,9 @@
                                         <constraint firstAttribute="width" constant="127" id="XyD-ql-iwl"/>
                                     </constraints>
                                     <state key="normal" image="Card 0"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="1L7-e4-84e"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JP1-z4-ZFt" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="147" y="0.0" width="127" height="162"/>
@@ -189,6 +228,9 @@
                                         <constraint firstAttribute="height" constant="162" id="k5G-IN-57M"/>
                                     </constraints>
                                     <state key="normal" image="Card 1"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="XXg-dE-qQ8"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lki-3Y-VPd" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="294" y="0.0" width="127" height="162"/>
@@ -197,6 +239,9 @@
                                         <constraint firstAttribute="width" constant="127" id="aBj-dD-C0W"/>
                                     </constraints>
                                     <state key="normal" image="Card 2"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="4Es-Yc-Gfi"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v92-37-Jxk" customClass="Card" customModule="KidsLDS" customModuleProvider="target">
                                     <rect key="frame" x="441" y="0.0" width="127" height="162"/>
@@ -205,6 +250,9 @@
                                         <constraint firstAttribute="width" constant="127" id="l7b-YE-GRe"/>
                                     </constraints>
                                     <state key="normal" image="Card 3"/>
+                                    <connections>
+                                        <action selector="cardClicked:" destination="-1" eventType="touchUpInside" id="bkO-Km-MP1"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

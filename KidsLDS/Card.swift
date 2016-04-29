@@ -42,7 +42,7 @@ public class Card: UIButton {
         
         super.init(coder: aDecoder)
         
-        self.alpha = 0.5
+        //self.alpha = 0.5
     }
     
     var frontImage: UIImage {
@@ -68,6 +68,10 @@ public class Card: UIButton {
         }
     }
     
+    var isFliped: Bool{
+        get { return _fliped}
+    }
+    
     
     override public func isEqual(object: AnyObject?) -> Bool {
         let otherCard = object as? CardIV
@@ -78,19 +82,22 @@ public class Card: UIButton {
     }
     
     func playFlipToFont(){
-        playFlipCarAnimation(true)
+        flipCard(true)
+        //playFlipCarAnimation(true)
     }
     
     func playFlipToBack(){
-        
+        flipCard(false)
         //playFlipCarAnimation(false)
     }
     
     private func flipCard(flipToFront: Bool){
         if(flipToFront){
             self.setImage(frontImage, forState: UIControlState.Normal)
+            _fliped = true
         } else {
             self.setImage(backImage, forState: UIControlState.Normal)
+            _fliped = false
         }
     }
     

@@ -83,16 +83,20 @@ class MatchingGameVC: UIViewController {
     func startGame(){
     
         deck = ProphetDeck()
-        cards = deck.dealCardsInPairs(cards)
+        board = MatchingGameBoard(cards: deck.dealCardsInPairs(cards))
+        //cards = deck.dealCardsInPairs(cards)
+        
     }
     
     
     @IBAction func cardClicked(sender: Card) {
-        if sender.isFliped {
-            sender.playFlipToBack()
-        } else {
-            sender.playFlipToFont()
+        if (board.cardSelected(sender)){
+            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "resetCards", userInfo: nil, repeats: false)
         }
+    }
+    
+    func resetCards() {
+        board.resetCards()
     }
     
 

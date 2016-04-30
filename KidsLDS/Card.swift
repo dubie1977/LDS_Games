@@ -72,6 +72,11 @@ public class Card: UIButton {
         get { return _fliped}
     }
     
+    var isMatched: Bool{
+        get { return _matched}
+        set { _matched = newValue}
+    }
+    
     
     override public func isEqual(object: AnyObject?) -> Bool {
         let otherCard = object as? CardIV

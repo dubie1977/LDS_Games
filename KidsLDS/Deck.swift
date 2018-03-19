@@ -51,8 +51,8 @@ public class Deck{
             let image = semiRandomImages.removeAtIndex(randomNumber)
             newCards[x].frontImage = image
             newCards[x].backImage = backImage
-            newCards[x].playFlipToBack()
             newCards[x].tag = x
+            newCards[x].resetCard()
         }
         
         

@@ -12,7 +12,7 @@ public class Card: UIButton {
     
     private var _fliped :Bool
     private var _matched :Bool
-    private var _imageName: String
+    //private var _imageName: String
     
     private var _frontImage: UIImage!
     private var _backImage: UIImage?
@@ -29,7 +29,7 @@ public class Card: UIButton {
         
         self._fliped=false
         self._matched=false
-        self._imageName = "Unknown"
+        //self._imageName = "Unknown"
         
         super.init(frame: frame)
         
@@ -38,7 +38,7 @@ public class Card: UIButton {
     required public init?(coder aDecoder: NSCoder) {
         self._fliped=false
         self._matched=false
-        self._imageName = "Unknown"
+        //self._imageName = "Unknown"
         
         super.init(coder: aDecoder)
         
@@ -77,7 +77,6 @@ public class Card: UIButton {
         set { _matched = newValue}
     }
     
-    
     override public func isEqual(object: AnyObject?) -> Bool {
         let otherCard = object as? CardIV
         if ( self.tag == otherCard?.tag){
@@ -86,14 +85,20 @@ public class Card: UIButton {
         return false
     }
     
-    func playFlipToFont(){
+    public func playFlipToFont(){
         flipCard(true)
         //playFlipCarAnimation(true)
     }
     
-    func playFlipToBack(){
+    public func playFlipToBack(){
         flipCard(false)
         //playFlipCarAnimation(false)
+    }
+    
+    public func resetCard(){
+        playFlipToBack()
+        _fliped = false
+        _matched = false
     }
     
     private func flipCard(flipToFront: Bool){

@@ -26,6 +26,7 @@
                 <outlet property="card7" destination="68H-aS-prj" id="FiL-Eh-538"/>
                 <outlet property="card8" destination="fhb-4Z-nla" id="xaM-hn-4yA"/>
                 <outlet property="card9" destination="P4a-4Z-71k" id="H0C-9j-dEb"/>
+                <outlet property="gameModeLbl" destination="vix-4p-kpZ" id="S8p-GJ-FMw"/>
                 <outlet property="settingBtn" destination="oA4-QR-MDR" id="fdO-mZ-bZz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -48,6 +49,9 @@
                         <constraint firstAttribute="width" constant="50" id="zQ0-zN-8e0"/>
                     </constraints>
                     <state key="normal" image="Back Button"/>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="L9J-CM-N8i"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oA4-QR-MDR" userLabel="SettingsBtn">
                     <rect key="frame" x="966" y="18" width="50" height="50"/>
@@ -56,6 +60,9 @@
                         <constraint firstAttribute="width" constant="50" id="sbG-ip-MZ2"/>
                     </constraints>
                     <state key="normal" image="Setting Button"/>
+                    <connections>
+                        <action selector="settingButtonClicked:" destination="-1" eventType="touchUpInside" id="gtm-wm-xhx"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tub-8U-Nnx" userLabel="GameBoardStk">
                     <rect key="frame" x="228" y="83" width="568" height="678"/>
@@ -265,15 +272,23 @@
                         <constraint firstAttribute="width" constant="300" id="ksw-ak-Kd0"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vix-4p-kpZ">
+                    <rect key="frame" x="466" y="54" width="93" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="RJe-4w-UeY" firstAttribute="bottom" secondItem="vix-4p-kpZ" secondAttribute="top" constant="13" id="4ci-j2-bXT"/>
                 <constraint firstAttribute="trailing" secondItem="gcf-Ut-SF8" secondAttribute="trailing" id="5DY-iM-9XD"/>
                 <constraint firstItem="xQU-04-OLL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="3" id="BXv-5h-gJp"/>
                 <constraint firstItem="gcf-Ut-SF8" firstAttribute="bottom" secondItem="xQU-04-OLL" secondAttribute="bottom" constant="10" id="CGe-uZ-c4m"/>
                 <constraint firstItem="gcf-Ut-SF8" firstAttribute="bottom" secondItem="oA4-QR-MDR" secondAttribute="bottom" constant="10" id="Car-w4-rB9"/>
                 <constraint firstItem="gcf-Ut-SF8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IYr-67-9aY"/>
                 <constraint firstItem="oA4-QR-MDR" firstAttribute="centerY" secondItem="gcf-Ut-SF8" secondAttribute="centerY" id="MNw-YX-OMd"/>
+                <constraint firstItem="vix-4p-kpZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NyT-JO-6on"/>
                 <constraint firstItem="RJe-4w-UeY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OZK-n8-UG0"/>
                 <constraint firstAttribute="trailingMargin" secondItem="oA4-QR-MDR" secondAttribute="trailing" constant="15" id="Qih-YP-6Qg"/>
                 <constraint firstItem="tub-8U-Nnx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VRy-Qa-gc9"/>

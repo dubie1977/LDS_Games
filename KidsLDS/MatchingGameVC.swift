@@ -31,6 +31,7 @@ class MatchingGameVC: UIViewController {
     
     @IBOutlet weak var settingBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var gameModeLbl: UILabel!
     
     
     //local vars
@@ -84,19 +85,28 @@ class MatchingGameVC: UIViewController {
     
         deck = ProphetDeck()
         board = MatchingGameBoard(cards: deck.dealCardsInPairs(cards))
-        //cards = deck.dealCardsInPairs(cards)
+        gameModeLbl.text = board.gameMode
+        
         
     }
     
+    @IBAction func settingButtonClicked(sender: UIButton) {
+        gameModeLbl.text = board.nextGameMode()
+    }
+    
+    @IBAction func backButtonClicked(sender: UIButton) {
+        startGame()
+    }
     
     @IBAction func cardClicked(sender: Card) {
         if (board.cardSelected(sender)){
             NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "resetCards", userInfo: nil, repeats: false)
+            board.pausingGame = true
         }
     }
     
     func resetCards() {
-        board.resetCards()
+        board.endPause()
     }
     
 

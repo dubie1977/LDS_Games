@@ -67,7 +67,7 @@ class MatchingViewController: UIViewController {
         cardsBtn.append(card16Btn)
         
         //set tags
-        for (var i=0; i<cardsBtn.count; i++) {
+        for i in 0..<cardsBtn.count {
             cardsBtn[i].tag = i
         }
         
@@ -85,8 +85,8 @@ class MatchingViewController: UIViewController {
             print(err.debugDescription)
         } */
         
-        cardFlippedSound = getSoundFromFile("07_coin", fileType: ".wav")
-        matchFoundSound = getSoundFromFile("awesome", fileType: ".wav")
+        cardFlippedSound = getSoundFromFile(fileName: "07_coin", fileType: ".wav")
+        matchFoundSound = getSoundFromFile(fileName: "awesome", fileType: ".wav")
         
     }
 
@@ -98,11 +98,11 @@ class MatchingViewController: UIViewController {
     
     func getSoundFromFile(fileName: String, fileType: String) -> AVAudioPlayer{
         var sound = AVAudioPlayer()
-        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: fileType)
+        let path = Bundle.main.path(forResource: fileName, ofType: fileType)
         let soundURL = NSURL(fileURLWithPath: path!)
         
         do{
-            try sound = AVAudioPlayer(contentsOfURL: soundURL)
+            try sound = AVAudioPlayer(contentsOf: soundURL as URL)
             sound.prepareToPlay()
         } catch let err as NSError{
             print(err.debugDescription)
@@ -124,14 +124,14 @@ class MatchingViewController: UIViewController {
             cardFlippedSound.play()
             
             if( id < cards.count && !cards[id].isMatched() && (!cardsFliped.contains(card)) ){
-                sender.setImage(UIImage(named: card.getImageName()), forState: UIControlState.Normal)
+                sender.setImage(UIImage(named: card.getImageName()), for: UIControlState.normal)
                 cardsFliped.append(card)
                 if(cardsFliped.count == 2 && cardsFliped[0].getImageName()==cardsFliped[1].getImageName()){
                     //cards match
                     matchFoundSound.play()
                     
                     for match in cardsFliped{
-                        match.setMatched(true)
+                        match.setMatched(isMatched: true)
                     }
                     let matches = Int(matchCounterLbl.text!)!+1
                     matchCounterLbl.text = "\(matches)"
@@ -142,7 +142,7 @@ class MatchingViewController: UIViewController {
                         wonCounterLbl.text = "\(Int(wonCounterLbl.text!)!+1)"
                     }
                 }else {
-                    NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "wait", userInfo: nil, repeats: false)
+                    Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(MatchingViewController.wait), userInfo: nil, repeats: false)
                 }
             }
             
@@ -160,9 +160,9 @@ class MatchingViewController: UIViewController {
     
     func setupAudioPlayerWithFile() -> AVAudioPlayer  {
         
-        if let url = NSBundle.mainBundle().URLForResource("awesome", withExtension: "wav") {
+        if let url = Bundle.main.url(forResource: "awesome", withExtension: "wav") {
             do {
-                return try AVAudioPlayer(contentsOfURL: url)
+                return try AVAudioPlayer(contentsOf: url)
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
@@ -175,8 +175,8 @@ class MatchingViewController: UIViewController {
         if(cardsFliped.count == 2){
             print("reset cards \n")
             for card in cardsFliped{
-                cards[card.getTagID()].setFliped(false)
-                cardsBtn[card.getTagID()].setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
+                cards[card.getTagID()].setFliped(isFliped: false)
+                cardsBtn[card.getTagID()].setImage(UIImage(named: cardBackground), for: UIControlState.normal)
             }
             cardsFliped.removeAll()
         }
@@ -204,19 +204,19 @@ class MatchingViewController: UIViewController {
         
         //builds the deck of cards
         var semiRandomCards = [CardOld]()
-        for (var i = 0; i<8; i++){
+        for _ in 0..<8 {
             let randomNumber = Int(arc4random_uniform(UInt32(all16Cards.count)))
-            let card = all16Cards.removeAtIndex(randomNumber)
+            let card = all16Cards.remove(at: randomNumber)
             semiRandomCards.append(card)
             semiRandomCards.append(CardOld(id: card.getTagID(), imageName: card.getImageName()))
         }
         
         //randomizes the card locations
         var fullRandomCards = [CardOld]()
-        for (var i = 0; i<16; i++){
+        for i in 0..<16 {
             let randomNumber = Int(arc4random_uniform(UInt32(semiRandomCards.count)))
-            let card = semiRandomCards.removeAtIndex(randomNumber)
-            card.setTagID(i)
+            let card = semiRandomCards.remove(at: randomNumber)
+            card.setTagID(tagID: i)
             fullRandomCards.append(card)
         }
         
@@ -229,7 +229,7 @@ class MatchingViewController: UIViewController {
         matchCounterLbl.text = "0"
         cards = layoutCards()
         for button in cardsBtn{
-            button.setImage(UIImage(named: cardBackground), forState: UIControlState.Normal)
+            button.setImage(UIImage(named: cardBackground), for: UIControlState.normal)
         }
     }
     

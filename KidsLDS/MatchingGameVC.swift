@@ -84,7 +84,7 @@ class MatchingGameVC: UIViewController {
     func startGame(){
     
         deck = ProphetDeck()
-        board = MatchingGameBoard(cards: deck.dealCardsInPairs(cards))
+        board = MatchingGameBoard(cards: deck.dealCardsInPairs(cards: cards))
         gameModeLbl.text = board.gameMode
         
         
@@ -99,8 +99,8 @@ class MatchingGameVC: UIViewController {
     }
     
     @IBAction func cardClicked(sender: Card) {
-        if (board.cardSelected(sender)){
-            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "resetCards", userInfo: nil, repeats: false)
+        if (board.cardSelected(newCard: sender)){
+            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MatchingGameVC.resetCards), userInfo: nil, repeats: false)
             board.pausingGame = true
         }
     }

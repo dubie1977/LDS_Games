@@ -59,7 +59,7 @@ public class MatchingGameBoard{
                         newCard.playFlipToFont()
                         newCard.isMatched = true
                         cardsFlipped[0].isMatched = true
-                        cardsFlipped.removeAtIndex(0)
+                        cardsFlipped.remove(at: 0)
                         return false
                     } else {
                         newCard.playFlipToFont()

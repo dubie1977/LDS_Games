@@ -66,7 +66,7 @@ class CardIV: UIImageView {
     }
     
     
-    override func isEqual(object: AnyObject?) -> Bool {
+    func isEqual(object: AnyObject?) -> Bool {
         let otherCard = object as? CardIV
         if ( self.tag == otherCard?.tag){
             return true
@@ -75,11 +75,11 @@ class CardIV: UIImageView {
     }
     
     func playFlipToFont(){
-        playFlipCarAnimation(true)
+        playFlipCarAnimation(flipToFront: true)
     }
     
     func playFlipToBack(){
-        playFlipCarAnimation(false)
+        playFlipCarAnimation(flipToFront: false)
     }
     
     private func playFlipCarAnimation(flipToFront: Bool) {
@@ -91,7 +91,7 @@ class CardIV: UIImageView {
         self.animationImages = nil
         
         var imgArray = [UIImage]()
-        for var x = 1; x <= 5; x++ {
+        for x in 1..<6 {
             let img = UIImage(named: "dead\(x).png")
             imgArray.append(img!)
         }

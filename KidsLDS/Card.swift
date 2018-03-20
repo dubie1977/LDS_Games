@@ -77,7 +77,7 @@ public class Card: UIButton {
         set { _matched = newValue}
     }
     
-    override public func isEqual(object: AnyObject?) -> Bool {
+    public func isEqual(object: AnyObject?) -> Bool {
         let otherCard = object as? CardIV
         if ( self.tag == otherCard?.tag){
             return true
@@ -86,12 +86,12 @@ public class Card: UIButton {
     }
     
     public func playFlipToFont(){
-        flipCard(true)
+        flipCard(flipToFront: true)
         //playFlipCarAnimation(true)
     }
     
     public func playFlipToBack(){
-        flipCard(false)
+        flipCard(flipToFront: false)
         //playFlipCarAnimation(false)
     }
     
@@ -103,10 +103,10 @@ public class Card: UIButton {
     
     private func flipCard(flipToFront: Bool){
         if(flipToFront){
-            self.setImage(frontImage, forState: UIControlState.Normal)
+            self.setImage(frontImage, for: UIControlState.normal)
             _fliped = true
         } else {
-            self.setImage(backImage, forState: UIControlState.Normal)
+            self.setImage(backImage, for: UIControlState.normal)
             _fliped = false
         }
     }
@@ -114,7 +114,7 @@ public class Card: UIButton {
     private func playFlipCarAnimation(flipToFront: Bool) {
         
         //final image
-        self.setImage(UIImage(named: "dead5.png"), forState: UIControlState.Normal) //= UIImage(named: "dead5.png")
+        self.setImage(UIImage(named: "dead5.png"), for: UIControlState.normal) //= UIImage(named: "dead5.png")
         
         //clear animation
         self.imageView!.animationImages = nil

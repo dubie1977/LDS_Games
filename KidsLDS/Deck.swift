@@ -39,7 +39,7 @@ public class Deck{
         var semiRandomImages = [UIImage]()
         for _ in 0..<(newCards.count/2) {
             let randomNumber = Int(arc4random_uniform(UInt32(allImagesCopy.count)))
-            let image = allImagesCopy.removeAtIndex(randomNumber)
+            let image = allImagesCopy.remove(at: randomNumber)
             semiRandomImages.append(image)
             semiRandomImages.append(image)
             //semiRandomImages.append(CardOld(id: image.getTagID(), imageName: image.getImageName()))
@@ -48,7 +48,7 @@ public class Deck{
         //var fullRandomImages = [UIImage]()
         for x in 0..<semiRandomImages.count {
             let randomNumber = Int(arc4random_uniform(UInt32(semiRandomImages.count)))
-            let image = semiRandomImages.removeAtIndex(randomNumber)
+            let image = semiRandomImages.remove(at: randomNumber)
             newCards[x].frontImage = image
             newCards[x].backImage = backImage
             newCards[x].tag = x

@@ -52,7 +52,7 @@ class CardOld: NSObject {
     }
     
     
-    override func isEqual(object: AnyObject?) -> Bool {
+    func isEqual(object: AnyObject?) -> Bool {
         let otherCard = object as? CardOld
         if ( self.tagID == otherCard?.tagID){
             return true

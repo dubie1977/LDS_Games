@@ -171,7 +171,7 @@ class MatchingViewController: UIViewController {
     }
     
 //internal functions
-    func wait() {
+    @objc func wait() {
         if(cardsFliped.count == 2){
             print("reset cards \n")
             for card in cardsFliped{

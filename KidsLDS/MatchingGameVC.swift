@@ -105,7 +105,7 @@ class MatchingGameVC: UIViewController {
         }
     }
     
-    func resetCards() {
+    @objc func resetCards() {
         board.endPause()
     }
     

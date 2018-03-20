@@ -12,8 +12,6 @@
 		8C10E8BA1C421D4E00C837D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8B81C421D4E00C837D0 /* Main.storyboard */; };
 		8C10E8BC1C421D4E00C837D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8BB1C421D4E00C837D0 /* Assets.xcassets */; };
 		8C10E8BF1C421D4E00C837D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8BD1C421D4E00C837D0 /* LaunchScreen.storyboard */; };
-		8C10E8CA1C421D4E00C837D0 /* KidsLDSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8C91C421D4E00C837D0 /* KidsLDSTests.swift */; };
-		8C10E8D51C421D4E00C837D0 /* KidsLDSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8D41C421D4E00C837D0 /* KidsLDSUITests.swift */; };
 		8C10E8E31C44C76000C837D0 /* CardOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10E8E21C44C76000C837D0 /* CardOld.swift */; };
 		8C10E8E51C545A9800C837D0 /* 07_coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8E41C545A9800C837D0 /* 07_coin.wav */; };
 		8C10E8E81C54669F00C837D0 /* awesome.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8C10E8E71C54669F00C837D0 /* awesome.wav */; };
@@ -26,23 +24,6 @@
 		8CC6CCB31CC8584A00D8F4A4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6CCB21CC8584A00D8F4A4 /* Card.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8C10E8C61C421D4E00C837D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C10E8A91C421D4E00C837D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8C10E8B01C421D4E00C837D0;
-			remoteInfo = KidsLDS;
-		};
-		8C10E8D11C421D4E00C837D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C10E8A91C421D4E00C837D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8C10E8B01C421D4E00C837D0;
-			remoteInfo = KidsLDS;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		8C10E8B11C421D4E00C837D0 /* KidsLDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsLDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C10E8B41C421D4E00C837D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,10 +32,8 @@
 		8C10E8BB1C421D4E00C837D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C10E8BE1C421D4E00C837D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C10E8C01C421D4E00C837D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C10E8C51C421D4E00C837D0 /* KidsLDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidsLDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C10E8C91C421D4E00C837D0 /* KidsLDSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsLDSTests.swift; sourceTree = "<group>"; };
 		8C10E8CB1C421D4E00C837D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C10E8D01C421D4E00C837D0 /* KidsLDSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidsLDSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C10E8D41C421D4E00C837D0 /* KidsLDSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsLDSUITests.swift; sourceTree = "<group>"; };
 		8C10E8D61C421D4E00C837D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C10E8E21C44C76000C837D0 /* CardOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardOld.swift; sourceTree = "<group>"; };
@@ -71,20 +50,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		8C10E8AE1C421D4E00C837D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C10E8C21C421D4E00C837D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C10E8CD1C421D4E00C837D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -108,8 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				8C10E8B11C421D4E00C837D0 /* KidsLDS.app */,
-				8C10E8C51C421D4E00C837D0 /* KidsLDSTests.xctest */,
-				8C10E8D01C421D4E00C837D0 /* KidsLDSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,42 +170,6 @@
 			productReference = 8C10E8B11C421D4E00C837D0 /* KidsLDS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8C10E8C41C421D4E00C837D0 /* KidsLDSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C10E8DC1C421D4E00C837D0 /* Build configuration list for PBXNativeTarget "KidsLDSTests" */;
-			buildPhases = (
-				8C10E8C11C421D4E00C837D0 /* Sources */,
-				8C10E8C21C421D4E00C837D0 /* Frameworks */,
-				8C10E8C31C421D4E00C837D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8C10E8C71C421D4E00C837D0 /* PBXTargetDependency */,
-			);
-			name = KidsLDSTests;
-			productName = KidsLDSTests;
-			productReference = 8C10E8C51C421D4E00C837D0 /* KidsLDSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8C10E8CF1C421D4E00C837D0 /* KidsLDSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C10E8DF1C421D4E00C837D0 /* Build configuration list for PBXNativeTarget "KidsLDSUITests" */;
-			buildPhases = (
-				8C10E8CC1C421D4E00C837D0 /* Sources */,
-				8C10E8CD1C421D4E00C837D0 /* Frameworks */,
-				8C10E8CE1C421D4E00C837D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8C10E8D21C421D4E00C837D0 /* PBXTargetDependency */,
-			);
-			name = KidsLDSUITests;
-			productName = KidsLDSUITests;
-			productReference = 8C10E8D01C421D4E00C837D0 /* KidsLDSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,22 +177,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "DuBay Designs";
 				TargetAttributes = {
 					8C10E8B01C421D4E00C837D0 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = FYBTU7NK34;
-					};
-					8C10E8C41C421D4E00C837D0 = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = FYBTU7NK34;
-						TestTargetID = 8C10E8B01C421D4E00C837D0;
-					};
-					8C10E8CF1C421D4E00C837D0 = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = FYBTU7NK34;
-						TestTargetID = 8C10E8B01C421D4E00C837D0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -283,8 +201,6 @@
 			projectRoot = "";
 			targets = (
 				8C10E8B01C421D4E00C837D0 /* KidsLDS */,
-				8C10E8C41C421D4E00C837D0 /* KidsLDSTests */,
-				8C10E8CF1C421D4E00C837D0 /* KidsLDSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,20 +216,6 @@
 				8C10E8BC1C421D4E00C837D0 /* Assets.xcassets in Resources */,
 				8C10E8E51C545A9800C837D0 /* 07_coin.wav in Resources */,
 				8C10E8BA1C421D4E00C837D0 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C10E8C31C421D4E00C837D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C10E8CE1C421D4E00C837D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,36 +238,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C10E8C11C421D4E00C837D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C10E8CA1C421D4E00C837D0 /* KidsLDSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C10E8CC1C421D4E00C837D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8C10E8D51C421D4E00C837D0 /* KidsLDSUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8C10E8C71C421D4E00C837D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C10E8B01C421D4E00C837D0 /* KidsLDS */;
-			targetProxy = 8C10E8C61C421D4E00C837D0 /* PBXContainerItemProxy */;
-		};
-		8C10E8D21C421D4E00C837D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C10E8B01C421D4E00C837D0 /* KidsLDS */;
-			targetProxy = 8C10E8D11C421D4E00C837D0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8C10E8B81C421D4E00C837D0 /* Main.storyboard */ = {
@@ -395,13 +268,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -423,11 +304,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -440,13 +322,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -462,9 +352,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -483,7 +375,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.designs.dubay.KidsLDS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -501,56 +394,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.designs.dubay.KidsLDS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		8C10E8DD1C421D4E00C837D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = KidsLDSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.designs.dubay.KidsLDSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KidsLDS.app/KidsLDS";
-			};
-			name = Debug;
-		};
-		8C10E8DE1C421D4E00C837D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = KidsLDSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.designs.dubay.KidsLDSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KidsLDS.app/KidsLDS";
-			};
-			name = Release;
-		};
-		8C10E8E01C421D4E00C837D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = KidsLDSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.designs.dubay.KidsLDSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = KidsLDS;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		8C10E8E11C421D4E00C837D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = KidsLDSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.designs.dubay.KidsLDSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = KidsLDS;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -571,24 +417,6 @@
 			buildConfigurations = (
 				8C10E8DA1C421D4E00C837D0 /* Debug */,
 				8C10E8DB1C421D4E00C837D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C10E8DC1C421D4E00C837D0 /* Build configuration list for PBXNativeTarget "KidsLDSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C10E8DD1C421D4E00C837D0 /* Debug */,
-				8C10E8DE1C421D4E00C837D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C10E8DF1C421D4E00C837D0 /* Build configuration list for PBXNativeTarget "KidsLDSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C10E8E01C421D4E00C837D0 /* Debug */,
-				8C10E8E11C421D4E00C837D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -176,6 +176,9 @@
 		8C10E8A91C421D4E00C837D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					MatchingGameVC,
+				);
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "DuBay Designs";

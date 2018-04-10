@@ -30,8 +30,8 @@ class MatchingGameVC: UIViewController {
     @IBOutlet weak var card15: Card!
     
     @IBOutlet weak var settingBtn: UIButton!
-    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var gameModeLbl: UILabel!
+    @IBOutlet weak var backBtn: UIButton!
     
     
     //local vars
@@ -44,39 +44,22 @@ class MatchingGameVC: UIViewController {
         super.viewDidLoad()
         
         cards = [Card]()
-        //card0.setTagID(0)
         cards.append(card0)
-        //card1.setTagID(1)
         cards.append(card1)
-        //card2.setTagID(2)
         cards.append(card2)
-        //card3.setTagID(3)
         cards.append(card3)
-        //card4.setTagID(4)
         cards.append(card4)
-        //card5.setTagID(5)
         cards.append(card5)
-        //card6.setTagID(6)
         cards.append(card6)
-        //card7.setTagID(7)
         cards.append(card7)
-        //card8.setTagID(8)
         cards.append(card8)
-        //card9.setTagID(9)
         cards.append(card9)
-        //card10.setTagID(10)
         cards.append(card10)
-        //card11.setTagID(11)
         cards.append(card11)
-        //card12.setTagID(12)
         cards.append(card12)
-        //card13.setTagID(13)
         cards.append(card13)
-        //card14.setTagID(14)
         cards.append(card14)
-        //card15.setTagID(15)
         cards.append(card15)
-
         
         startGame()
     }

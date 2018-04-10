@@ -14,11 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    //private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> //Bool {
+        
+    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool{
         // Override point for customization after application launch.
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let matchingGameVC = MatchingGameVC(nibName: "MatchingGameVC", bundle: nil)
+        //let matchingGameVC = MatchingGameVC(nibName: "TestVC", bundle: nil)
+        //self.window = .pushViewController(matchingGameVC, animated: true)
         window?.rootViewController = matchingGameVC
         
         window?.makeKeyAndVisible()
